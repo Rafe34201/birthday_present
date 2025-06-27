@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>生日快樂</title>
+
+  <link rel="stylesheet" href="birthday.css"> 
+
+</head>
+<body>
+
+<!-- 第一頁 -->
+  <div id = "first_page" >
+    <h1>妳的名字是？</h1>
+    <input id = "name">
+    <p id = "name_hint"></p>
+    <br>
+    <button onclick = confname()>確認</button>
+  </div>
+
+
+<!-- 第二頁 -->
+  <div id = "second_page" class="hidden">
+
+    <h1 id = "two_title">最可愛生物競賽</h1>
+
+    <div id = "compare_images" >
+
+      <div class = "card "  id = "card_one" >
+        <img src = "images/ruan.png" id = "left" onclick="next()">
+      </div>
+
+      <h1 id = "versus">V.S</h1>
+
+      <div class = "card "  id = "card_two" >
+        <img src = "images/pavlova.png" id = "right" onclick = "wrong()" >
+        <p>NO!</p>
+      </div>      
+    </div> 
+
+
+    <div id = "win" class="hidden">
+      <h2>恭喜妳贏了！</h2>
+      <img src = "images/ruan.png">
+      <p id = "same"></p>
+      <Button id = "claim" onclick="claim()">領取獎品</Button>
+    </div>
+  </div>
+
+    <!--第三頁-->
+  
+  <div id = "thrid_page" class="hidden">
+    <h1>???</h1>
+    <h1>誒等等這不是標題</h1>
+
+
+    <div id = "ontime" class = "speak">
+      <p>
+        &nbsp;
+        To 在學校上課時睡覺睡到一半突然被夢嚇醒撞到桌子還放了個屁的傢伙：
+        <br><br>
+        如果妳在正確的時間打開這個網站的話，今天是妳的生日。
+        <br><br>
+        對我而言生日不是什麼張燈結綵的節日，但我還是想讓它在今年成為一個小小的、專屬於妳的時間點。
+        <br><br>
+        我們一起經歷過的事情不多不少，不至於轟轟烈烈，但我記得很多細節，記得妳的超級天真、說話的語氣，還有永遠會在句末加上「🤣」
+        <br><br>
+        未來我們應該不會再見，我也沒有回竹東高中看看的打算。
+        <br>
+        我甚至不知道幾年後妳會不會偶爾想到「有個怪怪的學長」—— 但沒關係。
+        <br><br>
+        生日快樂。
+        <br><br>
+        給十七歲的妳，也給未來的妳。
+        <br><br>
+        <span id = "formrafe">洪睿甫&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+        <span id = "pluhhh"><br><br><br><br></span>
+          <span id = "dltpic">
+      （對了我存了一些妳的醜照<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;試著按下「刪除」鍵把它們都刪掉吧）
+        </span>
+  
+      </p>
+      <button id = "noButton" onclick="moveButton()">刪除</button>
+    </div>
+
+    <div id = "late" class="hidden speak">
+      <p>
+        &nbsp;
+        To 在學校上課時睡覺睡到一半突然被夢嚇醒撞到桌子還放了個屁的傢伙：
+        <br><br>
+        很顯然妳又再一次的打開它了，今天已經不是妳的生日了。
+        <br><br>
+        下面的文字我幾乎不做變動，讓這個生日禮物就這麼留給妳：
+        <br><br>
+        我們一起經歷過的事情不多不少，不至於轟轟烈烈，但我記得很多細節，記得妳的超級天真、說話的語氣，還有永遠會在句末加上「🤣」
+        <br><br>
+        未來我們應該不會再見，我也沒有回竹東高中看看的打算。
+        <br>
+        我甚至不知道幾年後妳會不會偶爾想到「有個怪怪的學長」—— 但沒關係。
+        <br><br>
+        生日快樂。
+        <br><br>
+        給已經超過十七歲的妳，也就那個我應該再也見不到的
+        <br><br>
+        <span id = "futyou">未來的妳。</span>
+        <br><br>
+        <span id = "formrafe">洪睿甫&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+        <br>
+      </p>      
+    </div>
+      
+    <div id = "timmer">
+      <p>我們第一次訊息 已經是...</p>
+      <p id = "Time"></p>
+    </div>
+
+  </div>
+
+    <!--第四頁，後記-->
+    <div id = "forth_page" class="hidden">
+      <p>
+        恭喜妳連續錯過按鈕11次！<br>這裡我放了一些後記與小小心得，我已經懶得排版了你就將就這樣看吧
+        <span id = back >
+          <br><br>
+          寫這個網站的時候其實沒有什麼偉大的目的。我只是覺得快生日了，我應該做點什麼。既然我已經畢業了，送實體很麻煩。
+          <br><br>
+          開始的念頭很簡單，後來卻花了比想像中更多的時間，為了一段文字斟酌、為了一個動畫試半天。
+          <br><br>
+          沒有做出了什麼了不起的東西，祝妳喜歡。就算不喜歡也沒關係。就像你不喜歡蒙娜麗莎內褲一樣
+        </span>
+      </p>
+
+      <br>
+      <button onclick="goto_3()" class = "go">回去</button>
+    </div>
+
+
+      <script src="./birthdaytest.js"></script>
+</body>
+</html>
